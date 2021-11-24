@@ -899,12 +899,12 @@ function banChat() {
                sendKontak(from, `6283849660579`, `𝘽𝙞𝙢𝙖 𝘽𝙤𝙩𝙯`, 'Sibukk!!')
                break                   
         case 'owner':
-        case 'creator':
+        case 'admin':
                sendKontak(from, `${owner}`, `${ownerName}`, 'Sibukk!!')
                await sleep(1000)
                txtt =`Hai Kak..... ${pushname}\nItu Ownerku, Mau tau soal apa ya?`
 
-               buttons = [{buttonId: '!youtube',buttonText:{displayText: 'YOUTUBE'},type:1},{buttonId:'!infoig',buttonText:{displayText:'INSTAGRAM'},type:1}]
+               buttons = [{buttonId: '!infotk',buttonText:{displayText: 'TIKTOK'},type:1},{buttonId:'!infoig',buttonText:{displayText:'INSTAGRAM'},type:1}]
 
                buttonsMessage = {
                contentText: `${txtt}`,
@@ -939,35 +939,28 @@ devil.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
                total = math(`${groups.length}*${privat.length}`)
                timestampe = speed();
                latensie = speed() - timestampe             
-               menu =` *─ 𝙵𝙰𝚉𝚁𝙸𝙽 𝚂𝙷𝙾𝙿 ─*
+               menu =` *─ Byy Store ─*
                
- 𝘏𝘢𝘭𝘭𝘰 𝘒𝘢𝘬 *${pushname}*              
-┃⬡ _Owner :_ wa.me//6283161562525
-┃⬡ _IG : fazrin_ezz_
-┃⬡ _YT : Fazrin Ezz_
-┃⬡ _WEB : https://fazrinshop.rf.gd_
-┗⬣
+ 𝘏𝘢𝘭𝘭𝘰 𝘒𝘢𝘬 *${pushname}* TERIMAKASIH SUDAH MENGUNJUNGI Byy Store~            
 
 「 *PRODUK TOKO* 」
 ✘ *Layanan TopUp* ✘
 _❏ FreeFiree_
 _❏ Mobile Legend_
+  Fast & SemiFast
+_❏ Sausage Man_
+_❏ Point Blank_
 
-✘ *Voucher Game* ✘
-_❏ Garena Shell_
-
-✘ *App Premium* ✘
-_❏ YouTube Premium_
 ├───
 ⬣ #menu =  *Menu Utama*
-⬣ #ff = *List Diamond FreeFire*
-⬣ #ml = *List Diamond MLBB*
-⬣ #gs = *List Garena Shell*
-⬣ #otp = *List OTP / NOKOS +62l*
-⬣ #ytprem = *YouTube Premium*
 ⬣ #pay = *Metode Pembayaran*
 │
-└──「 \`\`\`EZZ-BOT\`\`\` 」`                          
+⬣ #ff = *TopUp Dm Free Fire*
+⬣ #mlbb = *TopUp Dm Mobile Legend*
+⬣ #cashpb = *TopUp Point Blank*
+⬣ #sausage = *TopUp Candy Sausage Man*
+│
+└──「 \`\`\`Byy Store\`\`\` 」`                          
                buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '☰ PRICE LIST'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'💰PEMBAYARAN💰'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'OWNER👤'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
 
                imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
@@ -976,17 +969,16 @@ _❏ YouTube Premium_
                contentText: `${menu}`,
                footerText: ` ── *List Produk* ──
 ${prefix}ff
-${prefix}ml
-${prefix}gs
-${prefix}ytprem
-${prefix}otp
+${prefix}mlbb
+${prefix}sausage
+${prefix}cashpb
 
 ── *List Menu* ──
 ${prefix}menu
 ${prefix}pay
 ${prefix}owner
 
-𝙱𝚘𝚝𝚣𝚣 𝙱𝚢 𝙵𝚊𝚣𝚛𝚒𝚗
+𝙱𝚘𝚝𝚣𝚣 𝙱𝚢 Byy Store
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1012,13 +1004,12 @@ ${prefix}owner
                latensie = speed() - timestampe             
                menu =`💰── *𝐌𝐄𝐓𝐎𝐃𝐄 𝐏𝐄𝐌𝐁𝐀𝐘𝐀𝐑𝐀𝐍* ──💰
 
-*⬣ DANA* || 089630883352 *(ALFI REYHAN)*
-*⬣ SHOPEE PAY* || 083110011351 *(NGAIRAH)*
-*⬣ OVO* || 089630883352 *(ALFI REYHAN)*
-*⬣ GOPAY* || *CHAT ADMIN*
-*⬣ QRIS* || *CHAT ADMIN*
-*⬣ BRI* || 643101028708538 *(ALFI REYHAN)*
-*⬣ ALFA/INDO = CHAT ADMIN*
+*⬣ DANA* || 089507948843 *(Robby Firmansyah)*
+*⬣ SHOPEE PAY* || 089507948843 *(Robby Firmansyah)*
+*⬣ OVO* || 089507948843 *(Siti Umayah)*
+
+Indomaret,Alfa chat Admin,nanti dikasih kode pembayaran
+Untuk Pembayaran Menggunakan Uang Cash/Cod + 2k
 `                          
                buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}menu`,buttonText:{displayText:'MENU AWAL'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'ADMIN👤'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
 
@@ -1026,7 +1017,7 @@ ${prefix}owner
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `© Fazrin Shop
+               footerText: `Happy Shopping _© Byy Store_
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1052,39 +1043,42 @@ ${prefix}owner
                latensie = speed() - timestampe             
                menu =`─ *FreeFire* ─
 
-Via ID || 1-5 Menit
-*(SELALU READY)*
-5         💎 : Rp 850
-20       💎 : Rp 2,800
-50       💎 : Rp 6,500
-70       💎 : Rp 8,700
-100     💎 : Rp 13.000
-140     💎 : Rp 17,400
-210     💎 : Rp 26,100
-355     💎 : Rp 43,500
-500     💎 : Rp 60,900
-520     💎 : Rp 66,000
-720     💎 : Rp 87,000
-1000   💎 : Rp 121,800
-1070   💎 : Rp 130,500
-2000   💎 : Rp 237,500
-2080   💎 : Rp 248,200
-7.290   💎 : Rp 890,000
-36.500 💎 : Rp 4,400,000
-MM :  26,400
-MB : 132,000‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
+_*Diamond Free fire 🔥*_
+Via ID || 1-10 Menit (Max 24 Jam)
+
+50💎 Rp 7.670	
+70💎 Rp 10.055
+100💎 Rp 15.240
+140💎 Rp 20.240
+210💎 Rp 29.500
+280💎 Rp 38.950
+355💎 Rp 48.850
+425💎 Rp 58.242
+500💎 Rp 69.286
+720💎 Rp 95.740
+860💎 Rp 115.355
+930💎 Rp 113.125
+1075💎 Rp 141.225
+1215💎 Rp 157.690
+1450💎 Rp 190.500
+2000💎 Rp 254.300
+4000💎 Rp 454.600
+BERLAKU KELIPATAN
+
+Membership Mingguan : Rp 27.660
+Membership Bulanan : Rp 138.675
 
 *FORMAT ORDER*
 ID :
 NICK :
 ORDER DM :`                          
-               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'ADMIN👤'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
+               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}format1`,buttonText:{displayText: 'FORMAT ORDER'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
 
                imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `© Fazrin Shop
+               footerText: `*HARGA SEWAKTU WAKTU BERUBAH*
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1098,6 +1092,132 @@ ORDER DM :`
 							thumbnail: fs.readFileSync('./media/ganteng.jpg'), }, forwardingScore:508, isForwarded:true, mentionedJid:[Tag + '@s.whatsapp.net', senderr]}})
                             devil.relayWAMessage(prep)
                             break
+case 'format1':
+             reply(`*Format Order: (FreeFire)*\n\nNickname:\nID :\nSisa DM:\nOrder DM:`)
+             break
+case 'mlbba':
+        case 'mla':               
+               parseMention = (text = '') => {
+               return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
+               totalChat = await devil.chats.all()
+               groups = devil.chats.array.filter(v => v.jid.endsWith('g.us'))
+               privat = devil.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+               total = math(`${groups.length}*${privat.length}`)
+               timestampe = speed();
+               latensie = speed() - timestampe             
+               menu =`─ *Diamond Mobile Legends FAST A* ─
+*VIA ID + SERVER*
+*1 - 10 menit*
+
+86💎 Rp. 19.600
+172💎 Rp. 39.150
+257💎 Rp. 57.700
+344💎 Rp. 77.250
+429💎 Rp. 95.800
+514💎 Rp. 115.350
+600💎 Rp. 123.900
+706💎 Rp. 154.900
+878💎 Rp. 189.550
+963💎 Rp. 210.000
+1050💎 Rp. 230.000
+1412💎 Rp. 300.850
+2195💎 Rp. 445.275
+
+
+Starlight⭐ FAST Rp. 129.000
+Starlight Plus⭐ FAST Rp. 282.000
+Twilight⭐ FAST Rp. 129.000
+
+Jam Operasional : Buka 24 Jam
+NB : Proses maksimal 24 jam
+
+*FORMAT ORDER (mlbb)*
+ID :
+(Server) :
+NICK :
+ORDER DM :`                          
+               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}format2`,buttonText:{displayText: 'FORMAT ORDER'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
+
+               imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
+
+               buttonsMessage = {
+               contentText: `${menu}`,
+               footerText: `*HARGA SEWAKTU WAKTU BERUBAH*
+`, imageMessage: imageMsg,
+               buttons: buttons,
+               headerType: 4
+}
+            
+               prep = await devil.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek, contextInfo:{ mentionedJid: parseMention(menu), externalAdReply: {
+							title: `Hai ${pushname} 👋`,
+							body: `${tanggal}`,
+							previewType: 1,
+							thumbnailUrl: "https://ibb.co/FzLx165/Nakano.jpg",
+							thumbnail: fs.readFileSync('./media/ganteng.jpg'), }, forwardingScore:508, isForwarded:true, mentionedJid:[Tag + '@s.whatsapp.net', senderr]}})
+                            devil.relayWAMessage(prep)
+                            break
+case 'format2':
+             reply(`*Format Order (mlbb A)*\n\nNickname:\nID :\n(server):\nOrder DM:`)
+             break 
+      case 'mlbbsemi':
+        case 'mlb':               
+               parseMention = (text = '') => {
+               return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
+               totalChat = await devil.chats.all()
+               groups = devil.chats.array.filter(v => v.jid.endsWith('g.us'))
+               privat = devil.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+               total = math(`${groups.length}*${privat.length}`)
+               timestampe = speed();
+               latensie = speed() - timestampe             
+               menu =`─ *Mobile Legends SEMI FAST* ─
+               
+*Diamond Mobile Legends Paket B*
+*VIA ID + SERVER*
+
+39💎 [34+5 Bonus] Rp. 8.938
+65💎 [58+7 Bonus] Rp. 14.540
+92💎 [83+9 Bonus] Rp. 19.800
+133💎 [120+13 Bonus] Rp. 27.550
+266💎 [240+26 Bonus] Rp. 53.500
+400💎 [360+40 Bonus] Rp. 81.400
+534💎 [480+54 Bonus] Rp. 107.840
+670💎 [600+70 Bonus] Rp. 137.400
+1342💎[1200+142 Bonus] Rp. 267.632
+
+BERLAKU KELIPATAN
+
+Jam Operasional : Buka 24 Jam
+Estimasi proses : 1 - 15 menit
+NB : Proses maksimal 24 jam
+
+*FORMAT ORDER (mlbb)*
+ID :
+(Server) :
+NICK :
+ORDER DM :`                          
+               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}format3`,buttonText:{displayText: 'FORMAT ORDER'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
+
+               imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
+
+               buttonsMessage = {
+               contentText: `${menu}`,
+               footerText: `*HARGA SEWAKTU WAKTU BERUBAH*
+`, imageMessage: imageMsg,
+               buttons: buttons,
+               headerType: 4
+}
+            
+               prep = await devil.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek, contextInfo:{ mentionedJid: parseMention(menu), externalAdReply: {
+							title: `Hai ${pushname} 👋`,
+							body: `${tanggal}`,
+							previewType: 1,
+							thumbnailUrl: "https://ibb.co/FzLx165/Nakano.jpg",
+							thumbnail: fs.readFileSync('./media/ganteng.jpg'), }, forwardingScore:508, isForwarded:true, mentionedJid:[Tag + '@s.whatsapp.net', senderr]}})
+                            devil.relayWAMessage(prep)
+                            break
+case 'format3':
+             reply(`*Format Order (mlbb B)*\n\nNickname:\nID :\n(server):\nOrder DM:`)
+             break 
         case 'ml':
         case 'mlbb':               
                parseMention = (text = '') => {
@@ -1110,44 +1230,17 @@ ORDER DM :`
                latensie = speed() - timestampe             
                menu =`─ *Mobile Legends* ─
 
-Via ID+(server)|| 1-5 Menit
-R : 285
-86       💎  =     19.950
-172     💎  =     39.900
-257     💎  =     59.850
-344     💎  =     79.800
-429     💎  =     99.750
-514     💎  =   119.700
-600     💎  =   139.650
-706     💎  =   159.600
-878     💎  =   199.500
-963     💎  =   219.450
-1050   💎  =   239.400
-1220   💎  =   279.300
-1412   💎  =   319.200
-2195   💎  =   474.525
-3073   💎  =   674.025
-3688   💎  =   789.450
-4032   💎  =   869.250
-5532   💎  =1.185.600
-6238   💎  =1.345.200
-9288   💎  =1.975.050
-
-Starlight          = 131.670
-Starlight plus = 299.250
-
-*FORMAT ORDER*
-ID :
-(server):
-NICK :
-ORDER DM :`                          
-               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'ADMIN👤'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
+Byy Store Menyediakan 2 Paket Untuk TopUp Mobile Legend
+*PAKET A : Fast*
+*PAKET B : SemiFast*
+`                          
+               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}mlbba`,buttonText:{displayText:'PAKET A'},type:1},{buttonId: `${prefix}mlbbsemi`,buttonText:{displayText: 'PAKET B'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
 
                imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `© Fazrin Shop
+               footerText: `© Byy Store
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1161,8 +1254,101 @@ ORDER DM :`
 							thumbnail: fs.readFileSync('./media/ganteng.jpg'), }, forwardingScore:508, isForwarded:true, mentionedJid:[Tag + '@s.whatsapp.net', senderr]}})
                             devil.relayWAMessage(prep)
                             break
-        case 'gs':
-        case 'garenashell':               
+        case 'cashpb':
+        case 'pb':               
+               parseMention = (text = '') => {
+               return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
+               totalChat = await devil.chats.all()
+               groups = devil.chats.array.filter(v => v.jid.endsWith('g.us'))
+               privat = devil.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+               total = math(`${groups.length}*${privat.length}`)
+               timestampe = speed();
+               latensie = speed() - timestampe             
+               menu =`─ *Point Blank* ─
+
+_*CASH POINT BLANK*_
+*VIA ID*
+
+💵1200 CASH Rp. 10.475
+💵2400 CASH Rp. 20.600
+💵6000 CASH Rp. 47.000
+💵12000 CASH Rp. 81.000
+💵24000 CASH Rp. 185.000
+💵36000 CASH Rp. 274.850
+💵60000 CASH Rp. 455.000
+BERLAKU KELIPATAN
+
+Proses maksimal 24 jam
+*HARGA SEWAKTU WAKTU BERUBAH*
+`                          
+               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'ADMIN👤'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
+
+               imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
+
+               buttonsMessage = {
+               contentText: `${menu}`,
+               footerText: `© Byy Store
+`, imageMessage: imageMsg,
+               buttons: buttons,
+               headerType: 4
+}
+            
+               prep = await devil.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek, contextInfo:{ mentionedJid: parseMention(menu), externalAdReply: {
+							title: `Hai ${pushname} 👋`,
+							body: `${tanggal}`,
+							previewType: 1,
+							thumbnailUrl: "https://ibb.co/FzLx165/Nakano.jpg",
+							thumbnail: fs.readFileSync('./media/ganteng.jpg'), }, forwardingScore:508, isForwarded:true, mentionedJid:[Tag + '@s.whatsapp.net', senderr]}})
+                            devil.relayWAMessage(prep)
+                            break
+        case 'sausage':
+        case 'sosis':               
+               parseMention = (text = '') => {
+               return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
+               totalChat = await devil.chats.all()
+               groups = devil.chats.array.filter(v => v.jid.endsWith('g.us'))
+               privat = devil.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+               total = math(`${groups.length}*${privat.length}`)
+               timestampe = speed();
+               latensie = speed() - timestampe             
+               menu =`─ *SAUSAGE MAN* ─
+
+_*CANDY SAUSAGE MAN*_
+*VIA ID ONLY*
+
+60 CANDY 🍬 Rp. 13.200
+180 CANDY 🍬 Rp. 38.000
+316 CANDY 🍬 Rp. 65.000
+718 CANDY 🍬 Rp. 127.000
+1368 CANDY 🍬 Rp. 252.000
+2118 CANDY 🍬 Rp. 379.000
+7048 CANDY 🍬 Rp. 1.270.000
+
+Proses maksimal 24 jam
+*HARGA SEWAKTU WAKTU BERUBAH*
+`                          
+               buttons = [{buttonId: `${prefix}list`,buttonText:{displayText: '↩️ BACK TO MENU'},type:1},{buttonId:`${prefix}pay`,buttonText:{displayText:'PEMBAYARAN'},type:1},{buttonId: `${prefix}owner`,buttonText:{displayText: 'ADMIN👤'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU'},type:1}]
+
+               imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
+
+               buttonsMessage = {
+               contentText: `${menu}`,
+               footerText: `© Byy Store
+`, imageMessage: imageMsg,
+               buttons: buttons,
+               headerType: 4
+}
+            
+               prep = await devil.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek, contextInfo:{ mentionedJid: parseMention(menu), externalAdReply: {
+							title: `Hai ${pushname} 👋`,
+							body: `${tanggal}`,
+							previewType: 1,
+							thumbnailUrl: "https://ibb.co/FzLx165/Nakano.jpg",
+							thumbnail: fs.readFileSync('./media/ganteng.jpg'), }, forwardingScore:508, isForwarded:true, mentionedJid:[Tag + '@s.whatsapp.net', senderr]}})
+                            devil.relayWAMessage(prep)
+                            break
+        case 'gbs':
+        case 'garenabhshell':               
                parseMention = (text = '') => {
                return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
                totalChat = await devil.chats.all()
@@ -1184,7 +1370,7 @@ ORDER DM :`
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `© Fazrin Shop
+               footerText: `© Byy Store
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1221,7 +1407,7 @@ ORDER DM :`
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `© Fazrin Shop
+               footerText: `© Byy Store
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1258,7 +1444,7 @@ ORDER DM :`
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: `© Fazrin Shop
+               footerText: `© Byy Store
 `, imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
@@ -1274,8 +1460,8 @@ ORDER DM :`
                             break
         case 'list':
                list = []
-               listmenu = [`ff`,`ml`,`gs`,`yt`,`otp`,`pay`]
-               listmenuu = [`LIST Free Fire`,`LIST MLBB`,`LIST Garena Shell`,`LIST YT Prem`,`OTP/ NOKOS`,`Metode Pembayaran`]
+               listmenu = [`ff`,`ml`,`sosis`,`cashpb`,`pay`]
+               listmenuu = [`LIST Free Fire`,`LIST MLBB`,`LIST Sausage Man`,`LIST POINT BLANK`,`Metode Pembayaran`]
                nombor = 1
                startnum = 0
                for (let x of listmenu) {
@@ -1832,7 +2018,7 @@ ORDER DM :`
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: '© Fazrin Shop ', imageMessage: imageMsg,
+               footerText: '© Byy Store ', imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
 }
@@ -3262,7 +3448,7 @@ case 'tiktok':
               if (!q.includes('tiktok')) return reply(mess.error.Iv)
               buttons = [{buttonId: `${prefix}tiktoknowm ${q}`,buttonText:{displayText: `🎥 Video`},type:1},{buttonId:`${prefix}ttaudio ${q}`,buttonText:{displayText:'🎵 Mp3'},type:1}]
               imageMsg = (await devil.prepareMessageMedia(fs.readFileSync(`./media/devil.jpg`), 'imageMessage', {thumbnail: fs.readFileSync(`./media/devil.jpg`)})).imageMessage
-              buttonsMessage = {footerText:'Jangan Lupa Subscribe Yt Fazrin Ezz\n Helpme tu 1k subscriber', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'Jangan Lupa Subscribe Yt Byy Store\n Helpme tu 1k subscriber', imageMessage: imageMsg,
               contentText:`Silahkan pilihan media yg mau di download kak:v`,buttons,headerType:4}
               prep = await devil.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
               devil.relayWAMessage(prep)
@@ -4986,7 +5172,7 @@ case 'getvn':
              for (let _ of anu100) {
              devil.sendMessage(_.jid, 
 			{"contentText": `*「 SIARAN SHOP 」*\n\n${body.slice(4)}`,
-			"footerText": '*© Fazrin Shop*',
+			"footerText": '*© Byy Store*',
 			"buttons": [
 			{"buttonId": `#owner`,
 			"buttonText": {"displayText": "ADMIN👤"
@@ -5907,7 +6093,10 @@ case 'coffe':
 					break                            
 //------------------< Menunya Bang:v >-------------------
       case 'infoig':
-             reply(`Jangan Lupa Follow Ig Owner Ya : https://www.instagram.com/fazrin_ezz`)
+             reply(`Jangan Lupa Follow Ig Owner Ya : https://www.instagram.com/rbby__f`)
+             break
+      case 'infotk':
+             reply(`Jangan Lupa Follow tiktok Owner Ya : https://tiktok.com/@frmnsyhxixi`)
              break
       case 'grupbot':
              reply('')
@@ -6198,6 +6387,5 @@ console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushnam
         }
 	}
 }
-
 
 
